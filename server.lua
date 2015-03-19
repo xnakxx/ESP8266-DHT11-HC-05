@@ -1,3 +1,4 @@
+-- Horrible name I know. It really does not 'serve' anything but it's purpose.
 humi= nil
 fare= nil
 function ReadDHT()
