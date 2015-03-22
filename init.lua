@@ -9,4 +9,4 @@ tmr.stop(1)
 print("IP is "..wifi.sta.getip())
 end 
 end)
-dofile("server.lc")
+dofile("server.lc") -- or "server.lua" if you don't compile the scripts.
