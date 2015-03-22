@@ -1,3 +1,4 @@
+-- this is really thrown together and needs some work I'm sure. 
 local moduleName = ...
 local M = {}
 _G[moduleName] = M
