@@ -2,24 +2,24 @@
 humi= nil
 fare= nil
 function ReadDHT()
-     --dht = require "dht11" --dht11
-     dht = require "dht22"
+     --dht = require "dht11" -- if you are using a DHT11
+     dht = require "dht22" -- if you are using a DHT22
      dht.read(3) --gpio0
      t = dht.getTemperature()
      h = dht.getHumidity()
      -- release module
      dht = nil
-     --package.loaded.dht11=nil --dht11
-     package.loaded.dht22=nil
+     --package.loaded.dht11=nil -- if you are using a DHT11
+     package.loaded.dht22=nil --if you are using a DHT22
      
     if h == nil then
-  print("Error reading from DHT22")
+  print("Error reading from DHT")
      t= nil
      h = nil
      return
    else
-     --humi=(h) --dht11
-     humi = ((h - (h % 10)) / 10)
+     --humi=(h) -- if you are using a DHT11
+     humi = ((h - (h % 10)) / 10) --if you are using a DHT22
      fare = (9 * t / 50 + 32)
      t= nil
      h = nil
